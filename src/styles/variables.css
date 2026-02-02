@@ -1,0 +1,111 @@
+/**
+ * Space Tourism – design variables from Figma UI kit
+ * Source: https://www.figma.com/design/0YFm1u7AlQcekO1Kws2dKD/space-tourism-website (Style Guide node 1-152)
+ */
+
+:root {
+  /* ─── Colors ───────────────────────────────────────────────────────────── */
+  /* Blue (primary palette) */
+  --color-blue-900: 230 35% 7%; /* #0B0D17 – dark background */
+  --color-blue-300: 231 77% 90%; /* #D0D6F9 – light accent / nav text */
+  --color-white: 0 0% 100%; /* #FFFFFF */
+
+  /* Semantic aliases for the app */
+  --color-background: var(--color-blue-900);
+  --color-foreground: var(--color-white);
+  --color-foreground-muted: var(--color-blue-300);
+  --color-border: var(--color-blue-300);
+
+  /* ─── Typography – font families ───────────────────────────────────────── */
+  --font-bellefair: "Bellefair", serif;
+  --font-barlow: "Barlow", sans-serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+
+  /* ─── Typography – text presets (Figma desktop) ─────────────────────────── */
+  /* Preset 1 – Hero (Bellefair 144px) */
+  --text-preset-1-font: var(--font-bellefair);
+  --text-preset-1-size: 144px;
+  --text-preset-1-line-height: 1.72; /* ~171.9% */
+  --text-preset-1-letter-spacing: 0;
+
+  /* Preset 2 – Heading 1 (Bellefair 96px) */
+  --text-preset-2-font: var(--font-bellefair);
+  --text-preset-2-size: 96px;
+  --text-preset-2-line-height: 1.146;
+  --text-preset-2-letter-spacing: 0;
+
+  /* Preset 3 – Heading 2 (Bellefair 56px) */
+  --text-preset-3-font: var(--font-bellefair);
+  --text-preset-3-size: 56px;
+  --text-preset-3-line-height: 1.146;
+  --text-preset-3-letter-spacing: 0;
+
+  /* Preset 4 – Heading 3 (Bellefair 32px) */
+  --text-preset-4-font: var(--font-bellefair);
+  --text-preset-4-size: 32px;
+  --text-preset-4-line-height: 1.146;
+  --text-preset-4-letter-spacing: 0;
+
+  /* Preset 5 – Subheading 1 (Barlow Condensed 28px) */
+  --text-preset-5-font: var(--font-barlow-condensed);
+  --text-preset-5-size: 28px;
+  --text-preset-5-line-height: 1.2;
+  --text-preset-5-letter-spacing: 0.04em; /* ~4px */
+
+  /* Preset 6 – Subheading 2 (Bellefair 28px) */
+  --text-preset-6-font: var(--font-bellefair);
+  --text-preset-6-size: 28px;
+  --text-preset-6-line-height: 1.146;
+  --text-preset-6-letter-spacing: 0;
+
+  /* Preset 7 – Nav text (Barlow Condensed 14px) */
+  --text-preset-7-font: var(--font-barlow-condensed);
+  --text-preset-7-size: 14px;
+  --text-preset-7-line-height: 1.2;
+  --text-preset-7-letter-spacing: 0.14em; /* ~2px */
+
+  /* Preset 8 – Subheading 3 (Barlow Condensed 16px) */
+  --text-preset-8-font: var(--font-barlow-condensed);
+  --text-preset-8-size: 16px;
+  --text-preset-8-line-height: 1.2;
+  --text-preset-8-letter-spacing: 0.125em; /* 2px */
+
+  /* Preset 9 – Body (Barlow 18px) */
+  --text-preset-9-font: var(--font-barlow);
+  --text-preset-9-size: 18px;
+  --text-preset-9-line-height: 1.8;
+  --text-preset-9-letter-spacing: 0;
+
+  /* Heading XS (section label – Barlow Condensed 28px) */
+  --text-heading-xs-font: var(--font-barlow-condensed);
+  --text-heading-xs-size: 28px;
+  --text-heading-xs-line-height: 1.2;
+  --text-heading-xs-letter-spacing: 0.14em;
+
+  /* ─── Spacing scale (Figma spacing tokens) ─────────────────────────────── */
+  --space-25: 2px;
+  --space-50: 4px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-600: 48px;
+  --space-800: 64px;
+  --space-1000: 80px;
+  --space-1200: 96px;
+  --space-1600: 128px;
+
+  /* Layout (from Style Guide frames) */
+  --layout-header-padding-x: 80px;
+  --layout-header-padding-y: 64px;
+  --layout-section-padding-x: 80px;
+  --layout-section-padding-y: 72px;
+  --layout-content-max-width: 1110px;
+  --layout-design-width: 1440px;
+
+  /* ─── Border ───────────────────────────────────────────────────────────── */
+  --border-color: hsl(var(--color-blue-300) / 0.25);
+  --border-width: 1px;
+}

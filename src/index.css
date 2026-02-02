@@ -1,0 +1,201 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./styles/variables.css";
+
+/* App semantic colors (from Figma Style Guide) */
+:root {
+  --background: var(--color-blue-900);
+  --foreground: var(--color-white);
+  --card: var(--color-blue-900);
+  --card-foreground: var(--color-white);
+  --popover: var(--color-blue-900);
+  --popover-foreground: var(--color-white);
+  --primary: var(--color-white);
+  --primary-foreground: var(--color-blue-900);
+  --secondary: var(--color-blue-300);
+  --secondary-foreground: var(--color-blue-900);
+  --muted: var(--color-blue-300);
+  --muted-foreground: var(--color-blue-900);
+  --accent: var(--color-blue-300);
+  --accent-foreground: var(--color-blue-900);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: var(--color-white);
+  --border: var(--color-blue-300);
+  --input: var(--color-blue-300);
+  --ring: var(--color-blue-300);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: var(--color-blue-900);
+  --foreground: var(--color-white);
+  --card: var(--color-blue-900);
+  --card-foreground: var(--color-white);
+  --popover: var(--color-blue-900);
+  --popover-foreground: var(--color-white);
+  --primary: var(--color-white);
+  --primary-foreground: var(--color-blue-900);
+  --secondary: var(--color-blue-300);
+  --secondary-foreground: var(--color-blue-900);
+  --muted: var(--color-blue-300);
+  --muted-foreground: var(--color-white);
+  --accent: var(--color-blue-300);
+  --accent-foreground: var(--color-blue-900);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: var(--color-white);
+  --border: var(--color-blue-300);
+  --input: var(--color-blue-300);
+  --ring: var(--color-blue-300);
+}
+
+@theme {
+  /* Semantic colors (HSL components for opacity support) */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  /* Figma palette */
+  --color-blue-900: var(--color-blue-900);
+  --color-blue-300: var(--color-blue-300);
+  --color-white: var(--color-white);
+  /* Font families */
+  --font-bellefair: var(--font-bellefair);
+  --font-barlow: var(--font-barlow);
+  --font-barlow-condensed: var(--font-barlow-condensed);
+  /* Spacing scale */
+  --spacing-25: var(--space-25);
+  --spacing-50: var(--space-50);
+  --spacing-100: var(--space-100);
+  --spacing-150: var(--space-150);
+  --spacing-200: var(--space-200);
+  --spacing-300: var(--space-300);
+  --spacing-400: var(--space-400);
+  --spacing-500: var(--space-500);
+  --spacing-600: var(--space-600);
+  --spacing-800: var(--space-800);
+  --spacing-1000: var(--space-1000);
+  --spacing-1200: var(--space-1200);
+  --spacing-1600: var(--space-1600);
+  /* Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+/* Typography presets (Figma design system) */
+.text-preset-1 {
+  font-family: var(--text-preset-1-font);
+  font-size: var(--text-preset-1-size);
+  line-height: var(--text-preset-1-line-height);
+  letter-spacing: var(--text-preset-1-letter-spacing);
+}
+.text-preset-2 {
+  font-family: var(--text-preset-2-font);
+  font-size: var(--text-preset-2-size);
+  line-height: var(--text-preset-2-line-height);
+  letter-spacing: var(--text-preset-2-letter-spacing);
+}
+.text-preset-3 {
+  font-family: var(--text-preset-3-font);
+  font-size: var(--text-preset-3-size);
+  line-height: var(--text-preset-3-line-height);
+  letter-spacing: var(--text-preset-3-letter-spacing);
+}
+.text-preset-4 {
+  font-family: var(--text-preset-4-font);
+  font-size: var(--text-preset-4-size);
+  line-height: var(--text-preset-4-line-height);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+}
+.text-preset-5 {
+  font-family: var(--text-preset-5-font);
+  font-size: var(--text-preset-5-size);
+  line-height: var(--text-preset-5-line-height);
+  letter-spacing: var(--text-preset-5-letter-spacing);
+}
+.text-preset-6 {
+  font-family: var(--text-preset-6-font);
+  font-size: var(--text-preset-6-size);
+  line-height: var(--text-preset-6-line-height);
+  letter-spacing: var(--text-preset-6-letter-spacing);
+}
+.text-preset-7 {
+  font-family: var(--text-preset-7-font);
+  font-size: var(--text-preset-7-size);
+  line-height: var(--text-preset-7-line-height);
+  letter-spacing: var(--text-preset-7-letter-spacing);
+}
+.text-preset-8 {
+  font-family: var(--text-preset-8-font);
+  font-size: var(--text-preset-8-size);
+  line-height: var(--text-preset-8-line-height);
+  letter-spacing: var(--text-preset-8-letter-spacing);
+}
+.text-preset-9 {
+  font-family: var(--text-preset-9-font);
+  font-size: var(--text-preset-9-size);
+  line-height: var(--text-preset-9-line-height);
+  letter-spacing: var(--text-preset-9-letter-spacing);
+}
+.text-heading-xs {
+  font-family: var(--text-heading-xs-font);
+  font-size: var(--text-heading-xs-size);
+  line-height: var(--text-heading-xs-line-height);
+  letter-spacing: var(--text-heading-xs-letter-spacing);
+}
+
+/* Explore CTA – Figma node 1-2587: circle, Bellefair 32px, hover glow */
+.explore-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 9.375rem; /* 150px */
+  height: 9.375rem;
+  border-radius: 50%;
+  background: hsl(var(--color-white));
+  color: hsl(var(--color-blue-900));
+  font-family: var(--text-preset-4-font);
+  font-size: var(--text-preset-4-size);
+  line-height: var(--text-preset-4-line-height);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: box-shadow 0.3s ease;
+}
+.explore-cta:hover {
+  box-shadow: 0 0 0 5.5rem rgb(255 255 255 / 0.1);
+}
+@media (min-width: 768px) {
+  .explore-cta {
+    width: 17.125rem; /* 274px */
+    height: 17.125rem;
+    font-size: 2rem;
+  }
+  .explore-cta:hover {
+    box-shadow: 0 0 0 5.5rem rgb(255 255 255 / 0.1);
+  }
+}
+
+* {
+  border-color: hsl(var(--color-border));
+}
+
+body {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+}
