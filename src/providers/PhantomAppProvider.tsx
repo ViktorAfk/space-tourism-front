@@ -16,7 +16,7 @@ export function PhantomAppProvider({
       appIcon="https://space-tourism-front.vercel.app/icon.png"
       appName="Space Tourism"
     >
-      children{children}
+      {children}
     </PhantomProvider>
   );
 }

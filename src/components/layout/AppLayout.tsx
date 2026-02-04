@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 
 import { Header } from "@/components/layout/Header";
+import { cn } from "@/lib/utils";
 
 import bgDesktop from "@/assets/home/background-home-desktop.jpg";
 import bgMobile from "@/assets/home/background-home-mobile.jpg";
@@ -12,9 +13,10 @@ export function AppLayout() {
 
   return (
     <div
-      className={`relative min-h-screen flex flex-col ${
-        !isHome ? "bg-background" : ""
-      }`}
+      className={cn(
+        "relative flex min-h-screen flex-col",
+        !isHome && "bg-background"
+      )}
     >
       {/* Full-viewport background (home only) – covers header + main */}
       {isHome && (
@@ -33,9 +35,10 @@ export function AppLayout() {
 
       {/* Main – no padding on home so hero content can be full-width */}
       <main
-        className={`relative z-10 flex flex-1 flex-col ${
-          isHome ? "min-h-0" : "container mx-auto px-6 py-8 md:px-10 md:py-800"
-        }`}
+        className={cn(
+          "relative z-10 flex flex-1 flex-col",
+          isHome ? "min-h-0" : "container mx-auto px-6 py-8 md:px-10 md:py-8"
+        )}
       >
         <Outlet />
       </main>

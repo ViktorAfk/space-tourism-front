@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Logo, NavLink } from "@/components/ui";
 import { cn } from "@/lib/utils";
@@ -16,10 +16,20 @@ const navItems = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = prev;
+      };
+    }
+  }, [mobileMenuOpen]);
+
   return (
     <>
       <header
-        className="relative z-10  bg-transparent px-6 md:pr-0 md:pl-16 md:pt-10"
+        className="relative z-10 bg-transparent px-6 md:pl-16 md:pr-0 md:pt-10"
         role="banner"
       >
         <div className="flex items-center justify-between w-full">
